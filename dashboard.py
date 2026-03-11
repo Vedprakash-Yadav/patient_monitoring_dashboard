@@ -36,11 +36,11 @@ def check_alerts(df):
 # Highlight abnormal values
 def highlight_abnormal(val, col):
     if col == "heart_rate" and (val < 60 or val > 100):
-        return "background-color: #ffdddd"
+        return "background-color: red; color: white"
     if col == "oxygen_level" and val < 95:
-        return "background-color: #ffdddd"
+        return "background-color: red; color: white"
     if col == "temperature" and (val < 36.5 or val > 37.5):
-        return "background-color: #ffdddd"
+        return "background-color: red; color: white"
     return ""
 
 # Streamlit app
